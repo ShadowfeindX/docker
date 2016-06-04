@@ -19,8 +19,8 @@ RUN wget https://static.rust-lang.org/dist/rust-1.9.0-x86_64-unknown-linux-gnu.t
     mv rust-1.9.0-x86_64-unknown-linux-gnu rust && \
     mv rust/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/ rust/rustc/lib/rustlib/
     
-RUN sed -i '$ d' ~/.bashrc && \
-    echo "export PATH=~/jruby/bin:~/rust/rustc/bin:~/rust/cargo/bin:$PATH" >> ~/.bashrc
+RUN sed -i '$ d' /home/user/.bashrc && \
+    echo "export PATH=/home/user/jruby/bin:/home/user/rust/rustc/bin:/home/user/rust/cargo/bin:$PATH" >> /home/user/.bashrc
 
 WORKDIR /projects
 
