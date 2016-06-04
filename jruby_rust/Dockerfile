@@ -24,4 +24,7 @@ RUN sed -i '$ d' ~/.bashrc && \
 
 WORKDIR /projects
 
-CMD tail -f /dev/null
+CMD rustc --version && \
+    cargo --version && \
+    jruby -v && \
+    tail -f /dev/null
