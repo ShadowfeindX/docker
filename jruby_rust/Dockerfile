@@ -7,8 +7,7 @@ RUN sudo apt-get update && \
     sudo rm -rf /var/lib/apt/lists/*
 
 RUN sed -i '$ d' ~/.bashrc && \
-    echo "export PATH=/projects/jruby/bin:$PATH" >> ~/.bashrc && \
-    echo "sudo ./rust/install.sh" >> ~/.bashrc
+    echo "export PATH=/projects/jruby/bin:/projects/rust/rustc/bin:/projects/rust/cargo/bin:$PATH" >> ~/.bashrc && \
 
 WORKDIR /projects
 
