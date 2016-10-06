@@ -1,3 +1,5 @@
 FROM codenvy/cpp_gcc
+    
+RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh
 
-RUN sudo ./projects/rust/install.sh
+CMD tail -f /dev/null
